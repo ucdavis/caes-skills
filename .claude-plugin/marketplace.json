@@ -1,0 +1,18 @@
+{
+  "name": "caes-skills",
+  "owner": {
+    "name": "ucdavis-caes"
+  },
+  "description": "Shared caes-cru Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "caes-skills",
+      "source": "./plugins/caes-skills",
+      "description": "Shared caes-cru agent skills for team workflows.",
+      "version": "0.1.0",
+      "author": {
+        "name": "caes-cru"
+      }
+    }
+  ]
+}

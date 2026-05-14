@@ -1,0 +1,27 @@
+{
+  "name": "caes-skills",
+  "version": "0.1.0",
+  "description": "Shared caes-cru agent skills for team workflows.",
+  "author": {
+    "name": "caes-cru",
+    "url": "https://github.com/ucdavis-caes"
+  },
+  "repository": "https://github.com/ucdavis-caes/caes-skills",
+  "license": "MIT",
+  "keywords": ["caes-cru", "skills", "workflow"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "caes-skills",
+    "shortDescription": "Shared caes-cru team skills.",
+    "longDescription": "Shared caes-cru agent skills for team-specific workflows, images, and collaboration conventions.",
+    "developerName": "caes-cru",
+    "category": "Productivity",
+    "capabilities": ["Read"],
+    "websiteURL": "https://github.com/ucdavis-caes/caes-skills",
+    "defaultPrompt": [
+      "pixelify cal",
+      "Use the caes-cru PR workflow"
+    ],
+    "brandColor": "#0B6E4F"
+  }
+}
