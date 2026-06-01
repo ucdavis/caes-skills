@@ -35,6 +35,7 @@ plugins/caes-skills/
   .claude-plugin/plugin.json
   .codex-plugin/plugin.json
   skills/
+    devar/SKILL.md
     pixelify/SKILL.md
     pr-workflow/SKILL.md
 ```
@@ -43,6 +44,7 @@ plugins/caes-skills/
 
 | Skill | Description |
 |-------|-------------|
+| `devar` | DEVAR project scope and change discipline |
 | `pixelify` | Show a team member's pixelated team image |
 | `pr-workflow` | caes-cru's PR process |
 
