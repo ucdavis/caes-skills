@@ -36,6 +36,7 @@ plugins/caes-skills/
   .codex-plugin/plugin.json
   skills/
     devar/SKILL.md
+    mjml-emails/SKILL.md
     pixelify/SKILL.md
     pr-workflow/SKILL.md
 ```
@@ -45,6 +46,7 @@ plugins/caes-skills/
 | Skill | Description |
 |-------|-------------|
 | `devar` | DEVAR project scope and change discipline |
+| `mjml-emails` | MJML email template workflow, styling, wiring, and testing guidance |
 | `pixelify` | Show a team member's pixelated team image |
 | `pr-workflow` | caes-cru's PR process |
 
