@@ -26,6 +26,14 @@ description: Use when creating, migrating, replacing, wiring, styling, or testin
 5. Add a new component when content is reusable, conditional, or independently testable.
 6. Wire service calls at the same abstraction level as existing emails. Avoid bypassing queue/render services unless the project already does.
 
+## MJML Reference
+
+Use the official MJML documentation as the primary reference for MJML syntax, supported components, attributes, and rendering behavior:
+
+https://documentation.mjml.io/
+
+Prefer project-local email patterns over generic examples from the documentation when they conflict, but make sure to clearly inform the user of these conflicts and explain the reasoning.
+
 ## Styling
 
 - Prefer shared `mj-class` definitions in the common layout for repeated MJML attributes:
