@@ -1,0 +1,5 @@
+# 1Password credential template for CAES Elastic Cloud — use with: op run --env-file=elasticcloud-env -- <command>
+# Requires OP_SERVICE_ACCOUNT_TOKEN in your shell profile for prompt-free operation (see elasticcloud-logs skill)
+ELASTIC_URL=https://eb105873f73f47798ac54e66972d4185.westus2.azure.elastic-cloud.com
+ELASTIC_USER=op://jwlcisbzms7dibmaxzop6jo6ge/Elastic Logging/logging user
+ELASTIC_PASS=op://jwlcisbzms7dibmaxzop6jo6ge/Elastic Logging/logging password
