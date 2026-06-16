@@ -36,6 +36,8 @@ plugins/caes-skills/
   .claude-plugin/plugin.json
   .codex-plugin/plugin.json
   skills/
+    devar/SKILL.md
+    mjml-emails/SKILL.md
     pixelify/SKILL.md
     pr-workflow/SKILL.md
     elasticcloud-logs/SKILL.md
@@ -49,6 +51,8 @@ still live in plugin skills under `plugins/caes-skills/skills/`.
 
 | Skill | Description |
 |-------|-------------|
+| `devar` | DEVAR project scope and change discipline |
+| `mjml-emails` | MJML email template workflow, styling, wiring, and testing guidance |
 | `pixelify` | Show a team member's pixelated team image |
 | `pr-workflow` | caes-cru's PR process |
 | `elasticcloud-logs` | Query and interpret CAES Elastic Cloud logs |

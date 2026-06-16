@@ -10,24 +10,8 @@ Query the CAES Elastic Cloud deployment and interpret the results in plain langu
 ## Prerequisites
 
 - 1Password CLI (`op`) installed: `brew install 1password-cli`
+- 1Password desktop app integration enabled: **1Password → Settings → Developer → Integrate with 1Password CLI**
 - `elasticcloud-env` at the repo root (committed — `op://` references only, no real secrets)
-- A 1Password service account token in your shell profile (see Setup below)
-
-## Setup (one-time)
-
-Using a **service account token** is the recommended approach — it authenticates with a token instead of biometrics, so `op` works with zero prompts in every shell, including fresh shells opened by tools like Claude Code.
-
-1. Go to **my.1password.com → Developer → Service Accounts**, create a new service account with read access to vault `jwlcisbzms7dibmaxzop6jo6ge` (CAES-DO: CRU Developers).
-2. Add the token to your shell profile so it's available in every shell:
-
-```bash
-# ~/.zshrc or ~/.zprofile
-export OP_SERVICE_ACCOUNT_TOKEN="ops_..."
-```
-
-3. Reload your profile: `source ~/.zshrc`
-
-With `OP_SERVICE_ACCOUNT_TOKEN` set, all `op run` calls resolve silently — no Touch ID, no prompts.
 
 ## Index Patterns
 
@@ -95,7 +79,7 @@ Build a `POST /<index>/_search` JSON body with a `bool` query and `filter` claus
 
 ### 4. Execute
 
-Use `op run` with the committed env file. With `OP_SERVICE_ACCOUNT_TOKEN` set in your profile this runs with zero prompts:
+Use `op run` with the committed env file. 1Password will prompt for Touch ID to resolve the credentials:
 
 ```bash
 op run --env-file=elasticcloud-env -- sh -c \
@@ -138,7 +122,7 @@ Example aggregation for Walter error breakdown:
 
 | Condition | What to do |
 |-----------|------------|
-| `op` not found | Tell the user to run `brew install 1password-cli` |
-| `op` fails with auth error | `OP_SERVICE_ACCOUNT_TOKEN` is missing or expired — tell the user to add it to their shell profile (see Setup) |
+| `op` not found | Tell the user to run `brew install 1password-cli` and enable the desktop app integration in 1Password Settings → Developer |
+| `op` auth error / Touch ID prompt fails | Tell the user to ensure they're signed in to the 1Password desktop app and the CLI integration is enabled |
 | curl returns non-200 | Show the status code and `error` field from the response; suggest checking credentials or index pattern |
 | Empty results | Say so clearly; suggest broadening the time range, checking the index pattern, or verifying the app/service name |
