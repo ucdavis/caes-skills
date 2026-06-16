@@ -29,6 +29,7 @@ Codex accepts GitHub repos, HTTPS/SSH Git URLs, and local marketplace root direc
 ## Layout
 
 ```text
+AGENTS.md
 .agents/plugins/marketplace.json
 .claude-plugin/marketplace.json
 plugins/caes-skills/
@@ -37,7 +38,12 @@ plugins/caes-skills/
   skills/
     pixelify/SKILL.md
     pr-workflow/SKILL.md
+    elasticcloud-logs/SKILL.md
 ```
+
+`AGENTS.md` is a compatibility shim for older project includes that reference
+`/Users/rmartins/.caes-agent-skills/AGENTS.md`. Agent-facing behavior should
+still live in plugin skills under `plugins/caes-skills/skills/`.
 
 ## Available Skills
 
@@ -45,6 +51,7 @@ plugins/caes-skills/
 |-------|-------------|
 | `pixelify` | Show a team member's pixelated team image |
 | `pr-workflow` | caes-cru's PR process |
+| `elasticcloud-logs` | Query and interpret CAES Elastic Cloud logs |
 
 ## Adding a Skill
 
